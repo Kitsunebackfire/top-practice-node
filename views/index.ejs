@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="blogs content">
+      <h2>index</h2>
+      <a href="/">home</a>
+      <a href="/new">new post</a>
+      <% if (messages.length > 0) {messages.forEach(message => {%>
+      <div>
+        <div><%= message.user %></div>
+        <div><%= message.text %></div>
+        <div><%= message.added %></div>
+      </div>
+      <%})} else {%>
+      <p>there are no messages to display...</p>
+      <%}%>
+    </div>
+  </body>
+</html>
